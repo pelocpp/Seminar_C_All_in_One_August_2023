@@ -17,9 +17,6 @@ A) Visual Studio
 
 B) Github.com  ==> Github.com/pelocpp
 
-
-
-
 ==================================================
 
 C ist in C++ enthalten 
@@ -149,4 +146,229 @@ ii) Kontrollierte Ausführung (Zeile für Zeile)
 
 ===================================================
 
-Kontrollstruktur
+Kontrollstruktur:
+
+i) Ein Programm wird SEQUENTIELL abgearbeitet
+
+ii) Mit Kontrollstruktur kann hiervon abgewichen werden.
+
+Bedingung: if-Anweisung
+
+Was ist eine Bedingung:
+
+Ein Ausdruck, der den Wert bool (wahr oder falsch)
+zurückliefert.
+
+((  Hmm: Wenn nicht, ergänzt die Sprache C++ das Ende " != 0 "   ))
+
+Besser:
+Ein Ausdruck, der zu wahr oder falsch sich auswertet / evaluiert.
+
+Unschönheit: Den Datentyp bool gibt es nicht in C.
+
+==========================================================
+
+Operatoren:
+
+Logischen Verknüpfung:
+
+Es sind die Bedingungen A UND B erfüllt:   &&
+
+Es ist die Bedingungen A ODER B erfüllt:   ||
+
+Es ist die Bedingungen A NICHT erfüllt:    !
+
+
+((  Es gibt auch eine bit-weise Verknüpfung  ==> & zum Beispiel  ))
+
+==========================================================
+
+Viele Operatoren:
+
+int a = 1 + 2 * 3;   // 
+
+Ooops, die Sprache C++ kennt Punkt vor Strich !!!
+
+Umfangreicher:   Operatoren Vorrang
+                 Operator Precedence
+
+Tabelle:  
+
+https://www.bing.com/images/search?view=detailV2&ccid=dT7wocaB&id=323685091D7B845F05D5FC54FA670BD946C2E582&thid=OIP.dT7wocaBafibqaqY2wRE1QHaHi&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.753ef0a1c68169f89ba9aa98db0444d5%3frik%3dguXCRtkLZ%252fpU%252fA%26riu%3dhttp%253a%252f%252fxeratol.com%252fwp-content%252fuploads%252f2014%252f09%252fC-operator-precedence.png%26ehk%3d5oN3MQup99YS9t1nP10XO9367o2nsdeeBwEDStVPTL0%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=646&expw=634&q=c+operator+precedence&simid=608052526561058770&FORM=IRPRST&ck=DAC8077CD0D4C363B6DB3CA593811428&selectedIndex=0
+
+Best - Practice:
+
+Philosophie von Dennis Ritchie und Brian Kernighan:
+
+i)  A programmer knows what he does
+
+ii) America is a free country:
+
+    C is a free programming language
+
+Paradigma: So könnte / würde man das heute nicht mehr machen.
+
+// =====================================================
+
+Typkonvertierung:
+
+a) von kleiner auf größer: Kein Problem // ist von der 
+   Sprache akzeptiert.
+
+b) von größer auf kleiner: 
+   = ist von der Sprache akzeptiert
+   = es wird eine Warnung generiert (Übersetzungszeit)
+   = es wird eine Konvertierung durchgeführt - möglicherweise
+     mit Datenverlust (zufälliges Ergebnis / falsches Ergebnis)
+   = KEIN Absturz, Programm läuft mit falschen Werten korrekt weiter
+
+https://www.h-schmidt.net/FloatConverter/IEEE754de.html
+
+c) von größer auf kleiner: 
+   = ist von der Sprache akzeptiert
+   = Man kann diesen Wunsch EXPLIZIT formulieren:
+     Es gibt dann keine Warnung!
+   = Dennoch gilt ALLES WIE OBEN gesagt.
+
+EXPLIZITE Typkonvertierung:
+
+a = (int) d;  // int = double
+
+    (int) nennt man einen Type Cast 
+
+IMPLIZITE Typkonvertierung:
+
+a = d;        // int = double
+
+// ================================================================
+
+Kontrollstruktur:
+
+Nebenbei: if ist eine Anweisung, keine Schleife // Wiederholung
+
+http://if-schleife.de/
+
+Schleife:
+
+while - Kontrollstruktur: 
+
+{ 
+  anweisungen; 
+  statements;
+}  
+
+Block oder Rumpf
+
+while ( condition ) {
+  ...
+}
+
+ist condition == true
+   i) Rumpf wird abgearbeitet
+   ii) Am Ende des Rumpfes: Erneute Auswertung der Condition
+   iii) Je nach dem: Von Vorne oder Abbruch
+
+
+ist condition == false, wird nach der while-Anweisung weitergearbeitet
+
+===========================================================
+
+Kür der Kontrollstrukturen:
+
+Sie sind schachtelbar :)
+
+Hmmm, Vorsicht: Je tiefer macn schachtelt, desto unübersichtlicher 
+                kann es werden.
+
+                ==> Funktion / Unterprogramms
+
+===========================================================
+
+Warum ist
+
+  if ( n % 2 ) {
+  	  printf("  n is even\n");
+  }
+
+übersetzungsfähig ???
+
+Wiederholung: In ( ) steht eine Bedingung ==> true / false 
+
+Korrekte Grammatik von C:
+
+Wenn in den Klammern ein Ausdruck steht, der NICHT true / false  liefert:
+
+Hier : int
+
+dann denkt sich die Sprache C -- per Definition -- folgendes:
+
+  if ( (n % 2) != 0 ) {
+  	  printf("  n is even\n");
+  }
+
+Gedanklich: Ist der Wert ungleich Null
+
+Why:  Hmmm, kann etwas kompakter schreiben :(
+
+Hmm, Lesbarkeit leidet (für mich)
+
+===========================================================
+
+Schachtelung von Blöcken:
+
+Schachtelung von Kontrollstrukturen:
+
+Es lassen sich Variablen in einem inneren Block definieren:
+
+Sie sind dann nur in dem inneren Block gültig / benutzbar.
+
+Gewisser Vorteil: Ich habe sie dann nur zur Verfügung, wo sie verwendet werden sollte.
+
+Ist Okay, do it ... go for it :)
+
+Es gibt gewisse Möglichkeiten des Missbrauch: 
+
+Man kann Variablen mit DEMSELBEN Namen in inneren UND äußeren Blöcken definieren:
+
+Die innere Variable VERDECKT die äußere .
+
+>>>>  Don't do that !!!
+
+===========================================================
+
+1.Übung:
+
+"Teuflische Folge" // Collatz Folge:
+
+a) Zahlenfolge von Zahlen
+
+b) Startwert:   
+
+    int n = 7;
+
+c) Nächstes Element der Folge:
+
+    n ist gerade   ==> n / 2 
+
+    n ist ungerade ==> 3 * n + 1
+
+Beispiel:
+
+    7 => 22 => 11  => 34  => 17  => 52  => 26  => 13  => 40  => 20  => 10  => 5  => 18  => 8  => 4
+     => 2  => 1.
+
+Aussage: Für JEDEN Startwert der "Teuflische Folge" endet diese nach endlich vielen Schritten.
+
+         Nach 17 Schritten.
+
+
+Siehe auch
+
+https://de.wikipedia.org/wiki/Collatz-Problem
+
+Aufgabe: 
+
+Es ist ein Programm zu schreiben, das für einen beliebigen Startwert 
+die Elemente des teuflischen Folge ausgibt.
+
+Berechnen Sie auch die Länge der Folge.
