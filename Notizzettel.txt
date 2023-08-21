@@ -1,0 +1,152 @@
+C All in One
+=============
+
+Peter Loos
+
+C/C++  Java  C#  Mobile Apps 
+
+Back to the Roots:  C++ ( C )
+
+
+Jonas: Java, Python
+Andreas:  C++, Python
+
+Git / Github  
+
+A) Visual Studio
+
+B) Github.com  ==> Github.com/pelocpp
+
+
+
+
+==================================================
+
+C ist in C++ enthalten 
+
+1980   Dennis Ritchie // Brian Kernighan
+
+Support ===>  Unix   ( weg von Assembler )
+
+Systemprogrammierung:  C ist der de-facto Standard
+
+( C++ )
+
+Compiler / Interpreter
+
+Beide: Lesen den Quellcode 
+
+Compiler: Erzeugt Maschinencode // reale CPU // 
+
+Beispiel: Register // EAX // Akkumulator // Rechenwerk einer CPU
+
+Neue Varianten: Java, C#:
+
+2 Übersetzungen:  i) Quellcode ==> Zwischencode
+                 ii) Zwischencode ==> Maschinencode ( VMs )
+
+Interpreter: Erzeugt KEINEN Maschinencode // führt die Anweisungen
+             die im Quellcode stehen, aus.
+
+"Hello World"
+
+// ========================================================
+
+Programmiersprache: 
+
+== Lexikon   ( Wörter der Sprache )
+== Grammatik ( Syntax /  Schreibweise )
+
+Quelltext:  Grammatik
+
+Compiler:  i)  Grammatik überprüfen
+           ii) Maschinecode erzeugen
+
+.exe:  ist die Endung einer Datei
+       mit Maschinencode unter Windows
+
+============================================
+
+#include <stdio.h> 
+
+A) System-Dateien:        Mit < und >
+B) Eigene Header-Dateien: Mit ""
+
+============================================
+
+Eine Variable ist ein Bezeichner (zahl) 
+und reserviert ein gewisses Stück Speicher.
+
+Wieviel: Das legt der Datentyp fest.
+
+Was ist ein Datentyp:
+
+Er legt fest, welche Eigenschaft dem Stück Speicher 
+  zugeordnet wird.
+
+Beispiel:  Ganze Zahlen:   1, 100, -50   NICHT :  3.55
+
+           int            4 Bytes
+           long           4 oder 8 Bytes
+           long long      8 Bytes
+           short          2 Bytes
+
+           ( byte ) char 
+
+
+           Gleitpunktzahl:  3.55, -99.99, 10.0e+3
+
+           float, double
+
+           In den meisten Fällen:
+           
+           float reserviert 4 Bytes
+           double reserviert 8 Bytes
+
+           char:   Zeichen  zB  '1'  oder '?'
+
+           Zeichenkette / String:
+
+           "ABC" oder "Hello World"   ==>  char*
+
+           Hat die Anzahl Bytes eine Auswirkung?
+
+           Für den Wertebereich: 
+
+            Je mehr Bytes, desto größere Zahlen kann
+            ich intern im Speicher darstellen !
+
+Wie wird eine ganze Zahl im Speicher abgelegt:
+
+Ironisch: Bits und Bytes
+
+Exakt: "Zweier - Komplement" 
+
+123 ==>  0111 1011
+
+Microcomputer - Programierung
+
+===================================================
+
+Ausführung eines Programms:
+
+i) Click & Go
+
+ii) Kontrollierte Ausführung (Zeile für Zeile)
+
+    mit dem Debugger:
+
+    a) Menü ......
+    b) Funkionstasten:  F10, F11, F5, F9
+
+    Haltepunkt:  F9
+
+    F5:  Gehe zum nächsten Haltepunkt
+
+    Gelber Pfeil:  Bin VOR der Zeile
+
+    F10: EINE Zeile ausführen
+
+===================================================
+
+Kontrollstruktur
