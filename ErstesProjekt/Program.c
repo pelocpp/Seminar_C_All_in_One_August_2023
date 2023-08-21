@@ -196,7 +196,7 @@ void main_blockschachtelung_mit_variablen()
 }
 
 
-void main()
+void main_mit_continue_oder_break ()
 {
 	int n = 10;
 
@@ -224,4 +224,114 @@ void main()
 void main_fuer_uebung()
 {
 	uebung_01_teufel();
+}
+
+void main_two_divisions ()
+{
+	double d1, d2;
+
+	d1 = 3.0;
+	d2 = 6.0;
+
+	double result = d1 / d2;
+
+	printf("Result: %.2f / %.2f = %.2f\n", d1, d2, result);
+
+	int i1, i2;
+
+	i1 = 3;
+	i2 = 6;
+
+	int iresult = i1 / i2;
+
+	printf("Result: %d / %d = %d\n", i1, i2, iresult);
+
+	result = (double) i1 / i2;
+
+	printf("Result: %d / %d = %.2f\n", i1, i2, result);
+}
+
+void main_for()
+{
+	// for die erste
+	//for ( int i = 0 ; i < 3 ; i++ )
+	//{
+	//	printf("bin in der for-Schleife: %d\n", i);
+	//}
+
+	// =========================================
+
+	// Varianten - für Extreme - ist eine Endlos Schleife
+	// Embedded Devices kennen das
+	//for ( ; ; )
+	//{
+	//	printf("bin in der for-Schleife\n");
+	//}
+
+	//// ist dasselbe wie
+	//while (1) {
+
+	//}
+
+	// =========================================
+
+	//int n = 0;
+	//for ( ; n < 10 ; n = n + 2 )
+	//{
+	//	printf("bin in der for-Schleife: %d\n", n);
+	//}
+
+	// =========================================
+
+	for ( int i = 0 ; i < 3 ; i++ )
+	{
+		printf("bin in der for-Schleife: %d\n", i);
+	}
+
+	// ist IDENTISCH zu 
+
+	int i = 0;
+	while (i < 3) {
+		printf("bin in der for-Schleife: %d\n", i);
+		i++;
+	}
+}
+
+void main()
+{
+	//int n = 10;
+
+	//++n;
+	//n++;
+
+	//printf("n = %d\n", n);
+
+	// ============================
+
+	int n = 10;
+	int m;
+
+	m = ++n;     // Pre - Inkrement
+	printf("m = %d\n", m);
+
+	// oder 
+
+	n = 10;
+	m = n++;     // Post - Inkrement
+	printf("m = %d\n", m);
+
+	// ============================
+
+    n = 10;
+
+	n++;         // Inkrement
+	m = n;       // Wertzuweisung
+	printf("m = %d\n", m);
+
+	// oder 
+
+	n = 10;
+	m = n;     // Wertzuweisung
+	n++;       // Inkrement
+	printf("m = %d\n", m);
 }

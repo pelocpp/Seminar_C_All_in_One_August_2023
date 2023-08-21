@@ -417,6 +417,50 @@ b) continue:
    i) Rest des Rumpfes wird NICHT mehr ausgeführt
    ii) Vorsicht: ++n; oder ähnliches nicht vergessen !!!
 
+=====================================================
 
+Division:
 
+Ist in C (gerne auch in anderen Sprachen)
 
+ZWEIMAL vorhanden:
+
+i) Ganzzahlige Division
+
+ii) Gleitpunkt-Division
+
+zu i) Wenn BEIDE Operanden vom Typ int (oder vergleichbares) sind
+
+zu ii) Wenn EINER der beiden Operanden ein Gleitpunkt-Operand ist
+       (  double, float )
+
+Hier sollte man genau hinsehen, welche Division ich haben möchte.
+
+=============================================================
+
+Kontrollstruktur:
+
+for-Schleife:   Syntax
+
+for ( init ; condition ; weiter_schalten ) {
+}
+
+Kontrollierender Index
+oder
+Schleifenzähler
+
+init:            EINMAL - nur vor Eintritt in die Schleife
+condition:       JEDESMAL, wenn der Rumpf ausgeführt worden ist
+weiter_schalten: Am ENDE des Rumpfes - BEVOR die condition wieder betrachtet wird.
+
+=============================================================
+
+Unterschied Python <=> C:
+
+Python: Einrückungen achten / mitzählen:
+
+    Format-behaftete Sprache
+
+---------------------------------------
+
+C:  Format-freie Sprache
