@@ -18,5 +18,8 @@
     <ClCompile Include="Program.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Uebung_01_Teufel.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

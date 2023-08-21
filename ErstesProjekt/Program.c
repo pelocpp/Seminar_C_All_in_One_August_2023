@@ -1,5 +1,8 @@
 #include <stdio.h>  // standard input & output 
 
+// Funktions-Prototyp
+void uebung_01_teufel();
+
 // Einsprungpunkt
 void main_hello_world()
 {
@@ -163,7 +166,7 @@ void main_while_mit_schachtelung ()
 	printf("Ende\n");
 }
 
-void main()
+void main_blockschachtelung_mit_variablen()
 {
 	int n = 10;
 
@@ -190,4 +193,35 @@ void main()
 	// printf("Wert von otto = %d\n", ergebnis);
 
 	printf("Ende\n");
+}
+
+
+void main()
+{
+	int n = 10;
+
+	while (n >= 0) {
+
+		// printf("bin hier\n");
+
+		if (n == 5) {
+			n--;
+			continue;
+		}
+
+		printf("Wert von n = %d\n", n);
+		n--;
+
+		// etwas unvorhergesehenes ist eingetreten
+		//if (n == 5) {
+		//	break;
+		//}
+	}
+
+	printf("Ende\n");
+}
+
+void main_fuer_uebung()
+{
+	uebung_01_teufel();
 }

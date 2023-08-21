@@ -49,10 +49,24 @@ Interpreter: Erzeugt KEINEN Maschinencode // führt die Anweisungen
 
 // ========================================================
 
+Compiler: Erzeugt Maschinencode // reale CPU // 
+
+Etwas genauer: Erzeugt Maschinencode zunächst mal PRO DATEI
+
+   Diesen legt er in einer Datei mit der Endung .obj ab.
+
+Jetzt gibt es neben dem Compiler noch ein zweites Tool:  Linker.
+
+Der Linker baut aus vielen .obj Dateien EINE .exe Datei
+
+// ========================================================
+
+
 Programmiersprache: 
 
 == Lexikon   ( Wörter der Sprache )
 == Grammatik ( Syntax /  Schreibweise )
+== Semantik  (Bedeutung) 
 
 Quelltext:  Grammatik
 
@@ -61,6 +75,19 @@ Compiler:  i)  Grammatik überprüfen
 
 .exe:  ist die Endung einer Datei
        mit Maschinencode unter Windows
+
+Zu Semantik ein Beispiel:
+
+void main()
+{
+	int n = 10;
+
+	if (n == 5) {
+		n--;
+		break;
+	}
+
+Grammatikalisch richtig, aber ohne Bedeutung...
 
 ============================================
 
@@ -372,3 +399,24 @@ Es ist ein Programm zu schreiben, das für einen beliebigen Startwert
 die Elemente des teuflischen Folge ausgibt.
 
 Berechnen Sie auch die Länge der Folge.
+
+=================================================
+
+Kontroll-Strukturen:
+
+Können auf 2 Weisen "außerplanmäßig" verlassen / neu betreten werden:
+
+a) break:
+
+Verlässt die Schleife.
+
+b) continue:
+
+   Führt unmittelbar die Bedingung erneut aus:
+
+   i) Rest des Rumpfes wird NICHT mehr ausgeführt
+   ii) Vorsicht: ++n; oder ähnliches nicht vergessen !!!
+
+
+
+

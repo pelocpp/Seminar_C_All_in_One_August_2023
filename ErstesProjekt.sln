@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{9BF3A5F4-2A6B-4644-851B-7F271AC36E8C}"
 	ProjectSection(SolutionItems) = preProject
 		Notizzettel.txt = Notizzettel.txt
+		Zinsberechnung.pdf = Zinsberechnung.pdf
 	EndProjectSection
 EndProject
 Global
