@@ -2,6 +2,7 @@
 
 // Funktions-Prototyp
 void uebung_01_teufel();
+void uebung_02_zinsen();
 
 // Einsprungpunkt
 void main_hello_world()
@@ -221,11 +222,6 @@ void main_mit_continue_oder_break ()
 	printf("Ende\n");
 }
 
-void main_fuer_uebung()
-{
-	uebung_01_teufel();
-}
-
 void main_two_divisions ()
 {
 	double d1, d2;
@@ -297,7 +293,7 @@ void main_for()
 	}
 }
 
-void main()
+void main_post_pre_increment ()
 {
 	//int n = 10;
 
@@ -334,4 +330,9 @@ void main()
 	m = n;     // Wertzuweisung
 	n++;       // Inkrement
 	printf("m = %d\n", m);
+}
+
+void main()
+{
+	uebung_02_zinsen();
 }
