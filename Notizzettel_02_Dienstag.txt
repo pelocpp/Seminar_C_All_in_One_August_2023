@@ -1,0 +1,99 @@
+C All in One
+=============
+
+Notizen Dienstag:
+
+Unterprogramm
+
+== Eine Folge von Anweisungen, die immer wieder erforderlich ist
+
+== Ein Programm OHNE Unterprogramme ist schwer zu verstehen / zu lesen
+
+== Strukturierung eines Programms
+
+== Eine Folge von Anweisungen:
+      Geringfügige Unterschiede: Anzahl der Wiederholungen (for/while) ==> Parameter
+
+Nomenklatur:
+
+- Unterprogramm
+- Funktion / function
+- Prozedur / procedure
+- Subroutine
+- Methode / method  ( Objekt-Orient. Programmierung / C ist eine prozedurale Programmiersprace )
+
+Beispiel: Schlüsselwörter 'Function' / 'Procedure'
+
+Allgemein:
+
+2 Arten von Unterprogrammen:
+
+a) Unterprogramme, die ein Ergebnis berechnen ( sin, cos , ...)
+
+       Funktion / Function
+
+       Der Typ des Ergebnisses muss festgelegt werden (Datentyp / int, double )
+
+b) Unterprogramme, die kein Ergebnis berechnen ( paint )
+
+       Prozedur / Procedure
+
+       Es gib keinen Ergebnistyp: void
+
+===================================================
+
+	exit(123);
+
+Beendet ein Programm unmittelbar / sofort !!!
+
+===================================================
+
+Unterprogramme haben einen Namen
+
+Pro gesamtem Programm müssen diese Namen alle VERSCHIEDEN sein.
+
+===================================================
+
+Unterprogramme können Parameter haben:
+
+= Ein Parameter ist ein Stellvertreter für eine Variable / einen Wert
+
+= Ein Parameter hat einen Typ
+
+  Hinweis: C / C++ / Java / C# zählen zu den typisierten Programmiersprachen
+
+  Andere Sprachen kommen hier ohne Typ aus:  JavaScript / Python 
+
+= Beim Aufruf des Unterprogramms ist für den Stellvertreter ein konkreter Wert anzugeben
+
+===================================================
+
+Welche Arten von Variablen gibt es in C bzgl.
+
+   Lebensdauer / Sichtbarkeit / Gültigkeit ???
+
+Antwort:
+
+i) Globale Variablen
+
+   Gelten für die GESAMTE Laufzeit des Programms.
+
+   Wie wird sie definiert / vereinbart:
+
+   Auf der obersten Ebene // NICHT in einem Unterprogramm.
+
+===================================================
+
+Warum sind Java, C# ... bei mehreren Dateien so einfach in der Hantierung
+
+und C nicht ?????
+
+C:  Übersetzung:  One-Pass Compiler übersetzt: Eine Datei wird EINMAL von Anfang bis Ende gelesen.
+
+Java, C#:
+
+Übersetzung:  Two-Pass Compiler übersetzt
+  
+Jede Datei wird ZWEIMAL von Anfang bis Ende gelesen.
+
+===================================================

@@ -1,8 +1,14 @@
 #include <stdio.h>  // standard input & output 
+#include <stdlib.h>  // exit()
+
+// Extern-Deklaration einer globalen Variablen
+// extern int globaleVariable;
 
 // Funktions-Prototyp
 void uebung_01_teufel();
 void uebung_02_zinsen();
+
+void hauptprogramm();
 
 // Einsprungpunkt
 void main_hello_world()
@@ -10,6 +16,14 @@ void main_hello_world()
 	// Ausgabe auf die Konsole
 	printf("Hello World\n");
 }
+
+void main()
+{
+	printf("Wert von globaleVariable: %d\n", globaleVariable);
+
+	hauptprogramm();
+}
+
 
 // ==================================
 
@@ -330,9 +344,4 @@ void main_post_pre_increment ()
 	m = n;     // Wertzuweisung
 	n++;       // Inkrement
 	printf("m = %d\n", m);
-}
-
-void main()
-{
-	uebung_02_zinsen();
 }

@@ -7,8 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ErstesProjekt", "ErstesProj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{9BF3A5F4-2A6B-4644-851B-7F271AC36E8C}"
 	ProjectSection(SolutionItems) = preProject
-		Notizzettel.txt = Notizzettel.txt
+		Notizzettel_02_Dienstag.txt = Notizzettel_02_Dienstag.txt
 		Zinsberechnung.pdf = Zinsberechnung.pdf
+		Notizzettel_01_Montag.txt = Notizzettel_01_Montag.txt
 	EndProjectSection
 EndProject
 Global

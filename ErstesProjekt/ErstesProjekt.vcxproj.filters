@@ -24,5 +24,8 @@
     <ClCompile Include="Uebung_02_Zinsen.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Unterprogramme.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
