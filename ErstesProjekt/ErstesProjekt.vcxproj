@@ -132,6 +132,7 @@
     <ClCompile Include="Uebung_01_Teufel.c" />
     <ClCompile Include="Uebung_02_Zinsen.c" />
     <ClCompile Include="Uebung_03_Fakulaet.c" />
+    <ClCompile Include="Uebung_04_Vektor.c" />
     <ClCompile Include="Unterprogramme.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

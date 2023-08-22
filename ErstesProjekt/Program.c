@@ -1,6 +1,6 @@
-#include <stdio.h>  // standard input & output 
-#include <stdlib.h>  // exit()
-#include <math.h>  // sqrt
+#include <stdio.h>    // standard input & output 
+#include <stdlib.h>   // exit()
+#include <math.h>     // sqrt
 
 // Extern-Deklaration einer globalen Variablen
 // extern int globaleVariable;
@@ -9,9 +9,18 @@
 void uebung_01_teufel();
 void uebung_02_zinsen();
 void uebung_03_fakultaet();
+void uebung_04_vector();
 
 void arrays();
 void hauptprogramm();
+void wurzel();
+
+void main()
+{
+	uebung_04_vector();
+}
+
+// ==================================
 
 void wurzel ()
 {
@@ -26,13 +35,6 @@ void main_hello_world()
 	// Ausgabe auf die Konsole
 	printf("Hello World\n");
 }
-
-void main()
-{
-	wurzel();
-	arrays();
-}
-
 
 // ==================================
 
