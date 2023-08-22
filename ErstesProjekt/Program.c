@@ -14,10 +14,11 @@ void uebung_04_vector();
 void arrays();
 void hauptprogramm();
 void wurzel();
+void zeiger();
 
 void main()
 {
-	uebung_04_vector();
+	zeiger();
 }
 
 // ==================================

@@ -36,5 +36,8 @@
     <ClCompile Include="Uebung_04_Vektor.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Zeiger.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

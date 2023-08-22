@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-// function prototypes
+// list of all functions:
+// function prototypes (Funktionsprototyp)
 void vectorInit(double vector[], int len);
 double vectorLength(double vector[], int len);
 void vectorNormalize(double result[], double vec[], int len);

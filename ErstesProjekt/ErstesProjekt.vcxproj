@@ -134,6 +134,7 @@
     <ClCompile Include="Uebung_03_Fakulaet.c" />
     <ClCompile Include="Uebung_04_Vektor.c" />
     <ClCompile Include="Unterprogramme.c" />
+    <ClCompile Include="Zeiger.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

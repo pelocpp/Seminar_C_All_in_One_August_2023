@@ -323,3 +323,28 @@ Da müssen wir einen weiteren Vektor / weiteres Array für das Ergbnis
 bereit stellen.
 
 vectorAdd ( double vec1[], double vec2[], double sum[], int length);
+
+=======================================================
+
+Erste Schritte mit Adressen
+
+Prinzipiell lassen sich im Speicher 
+
+BYTES 
+
+per Adresse ansprechen.
+
+(( Bits: 1 Byte = 8 Bits ))
+
+Einzelne Bits sind NICHT via einer Adresse ansprechbar
+
+// Automatisierungstechnik: SPS  ==> Bits ansprachbar // Spezial CPUs
+
+Datentypen: 
+
+  int
+  double
+  // char
+  // Zeichenketten
+
+  int*    ===> Adresse einer Variablen
