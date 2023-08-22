@@ -27,5 +27,11 @@
     <ClCompile Include="Unterprogramme.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Uebung_03_Fakulaet.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Arrays.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -114,5 +114,123 @@ c) Zusatz: Ausgabe aller Fakultäten von 1! bis 30! in der Konsole
  
    Beobachung:  Diskutieren ...
 
+Hinweis:
 
-   
+https://cplusplus.com/reference/cstdio/printf/
+
+Was ist ein Überlauf:
+
+long long = 8 Bytes = 64 Bits.
+
+1 Byte = 255 = 1111 1111 (8 Bits) = FF (hex. Notation) 
+
+Überlauf:
+
+a) Es gibt KEINEN Absturz !!!
+
+b) Die Werte in einer solchen Variablen sind FALSCH.
+
+Konsequenz:
+
+a) Eine Fakultät größer 20 ist im herkömmlichen Algorithmus
+   nicht berechenbar !
+
+b) Man könnte von long long zu double wechseln
+
+   Nachteile: i) Auch ein double hat irgendwann einen Überlauf:
+
+                  double:  vor komma stellen, nach komma stellen, exponent, mantisse
+
+                  1234567890123456890 ==>  123.456 * 10 hoch 30
+
+              ii) Rundungs Ungenauigkeiten
+
+                  120.00001
+
+c) Gibt es eine zufriedenstellende Lösung:
+
+   i) Mit den so genannten "eingebauten" Datentypen (int, long)
+      NICHT.
+
+   ii) Mit selbstgeschriebenen Funktionen  schon.
+
+       Bzw. Standard Bibliotheken
+
+   Java:
+
+   BigInteger reallyBig = 
+     new BigInteger("1234567890123456890");
+
+Siehe auch
+
+https://stackoverflow.com/questions/21545468/big-integer-arithmetic
+
+==================================================================
+
+Zwischen Resumé:
+
+Unterprogramme:  Grundlagen.
+
+War das alles ???
+
+NEIN.
+
+Aber: Arrays und Zeiger (Pointer)
+
+==================================================================
+
+Zwischen Resumé:
+
+C ... : Grundlagen
+
+Fortgeschritten:   Alle Sprachen:  "Pointer"
+
+==================================================================
+
+Array:
+
+== Eine Anzahl von Daten (hintereinander) DESSELBEN Datentyps
+
+== Limitation: Ein Array hat eine FESTE Größe / Länge.
+
+Bemerkung:
+
+Es gibt auch Felder OHNE diese Limitation: 
+
+Man spricht dann von einer "Liste" 
+
+
+Was ist der Vorteil eines Arrays (mit Limitation):  PERFORMANZ.
+
+Ist Python langsamer: Ja -- aber Python ist für moderne Rechner konzipiert.
+
+Syntax:
+
+int zahlen[10];
+
+Hierdurch werden 10 int Variablen vereinbart.
+
+Kurios: Der Datentyp steht links und rechts vom Bezeichner 'zahlen'.
+
+Wie greife ich auf ein Feld = Array zu?
+
+Mit dem Operator [] : Index-Operator
+
+zahlen [3] = 123;
+
+ACHTUNG:
+
+Das ERSTE Element hat den Index 0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Why:
+
+i) Hat man so festgelegt
+ii) Performanz:
+
+    Weil ein Array (Stück Speicher) angesprochen wird.
+
+    Der Index 0 steht dann für den ANFANG des Speichers: Anfangsadresse
+
+==================================================================
+
+13:05

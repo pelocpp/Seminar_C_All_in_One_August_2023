@@ -7,7 +7,9 @@
 // Funktions-Prototyp
 void uebung_01_teufel();
 void uebung_02_zinsen();
+void uebung_03_fakultaet();
 
+void array_zum_ersten();
 void hauptprogramm();
 
 // Einsprungpunkt
@@ -19,9 +21,7 @@ void main_hello_world()
 
 void main()
 {
-	printf("Wert von globaleVariable: %d\n", globaleVariable);
-
-	hauptprogramm();
+	array_zum_ersten();
 }
 
 
