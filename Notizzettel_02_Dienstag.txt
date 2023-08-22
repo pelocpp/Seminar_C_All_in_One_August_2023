@@ -97,3 +97,22 @@ Java, C#:
 Jede Datei wird ZWEIMAL von Anfang bis Ende gelesen.
 
 ===================================================
+
+10 bis max. 15 Minuten Übung:
+
+a) Fakultät:
+
+Natürliche Zahl n:    n! = 1 * 2 * 3 * ... * (n-1) * n
+
+    Beispiel:         5! = 1 * 2 * 3 * 4 * 5 = 120
+
+b) Berechnung der Fakultät: fakul / fak / fakultaet 
+
+   Prozedur / Funktion im Sinne von C
+
+c) Zusatz: Ausgabe aller Fakultäten von 1! bis 30! in der Konsole
+ 
+   Beobachung:  Diskutieren ...
+
+
+   
