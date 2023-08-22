@@ -211,6 +211,9 @@ int zahlen[10];
 Hierdurch werden 10 int Variablen vereinbart.
 
 Kurios: Der Datentyp steht links und rechts vom Bezeichner 'zahlen'.
+i) Hat man so festgelegt
+ii) Performanz:
+
 
 Wie greife ich auf ein Feld = Array zu?
 
@@ -224,13 +227,75 @@ Das ERSTE Element hat den Index 0 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Why:
 
-i) Hat man so festgelegt
-ii) Performanz:
-
     Weil ein Array (Stück Speicher) angesprochen wird.
 
     Der Index 0 steht dann für den ANFANG des Speichers: Anfangsadresse
 
 ==================================================================
 
-13:05
+Was passiert bei Zugriff auf ein Array mit falschem Index ???
+
+A) Es wird der Index NICHT auf Zulässigkeit überprüft !!!!!!!!
+
+   Ritchie / Kernighan:  PERFORMANZ && "A programmer knows what he does"
+
+B) Wir tragen die Verantwortung
+
+C) Was passiert in dem Programm:
+
+   i)   Nichts (Zugriff hatte keine Auswirkung)
+   ii)  Absturz
+   iii) Sporadische Fehler: Zufälle Anordnung von i) oder ii)
+
+ Hinweis: There are no exceptions in C   // Natürlich in C++
+ 
+ ==================================================
+
+ Präprozessor
+ ------------
+
+ Idee:
+
+ Man erschaffe die Möglichkeit, BEVOR ein Programm übersetzt wird (Compiler),
+
+ dass der Quelltext AUTOMATISIERT bearbeitet werden kann:
+
+ Beispiel:
+
+ #define  ist wie folgt realisiert:
+
+ Beispiel:
+
+ #define LENGTH  20
+
+Jedes Textvorkommen von LENGTH wird im Quellcode durch 20 ersetzt.
+
+Ausführlich:
+
+Phase der Übersetzung in C:
+
+A) Präprozessor
+B) Compiler ( obj. ... )
+C) Linker (obj. .... ==> .exe)
+
+Fazit:
+
+Eine #define - Präprozessor Anweisung eignet sich gut für globale Konstante !!!
+
+=======================================================
+
+Leere Anweisung:    ;
+
+=======================================================
+
+Es gibt in C keine Arrays :-))))
+
+Es gibt in C NUR POINTER  :-)))
+
+=======================================================
+
+
+Zusammenführung Array und Unterprogramm
+---------------------------------------
+
+

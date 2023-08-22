@@ -9,7 +9,7 @@ void uebung_01_teufel();
 void uebung_02_zinsen();
 void uebung_03_fakultaet();
 
-void array_zum_ersten();
+void arrays();
 void hauptprogramm();
 
 // Einsprungpunkt
@@ -21,7 +21,7 @@ void main_hello_world()
 
 void main()
 {
-	array_zum_ersten();
+	arrays();
 }
 
 
