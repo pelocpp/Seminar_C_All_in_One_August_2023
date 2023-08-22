@@ -1,5 +1,6 @@
 #include <stdio.h>  // standard input & output 
 #include <stdlib.h>  // exit()
+#include <math.h>  // sqrt
 
 // Extern-Deklaration einer globalen Variablen
 // extern int globaleVariable;
@@ -12,6 +13,13 @@ void uebung_03_fakultaet();
 void arrays();
 void hauptprogramm();
 
+void wurzel ()
+{
+	double value = 2;
+
+	double result = sqrt(value);
+}
+
 // Einsprungpunkt
 void main_hello_world()
 {
@@ -21,6 +29,7 @@ void main_hello_world()
 
 void main()
 {
+	wurzel();
 	arrays();
 }
 

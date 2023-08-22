@@ -299,3 +299,27 @@ Zusammenführung Array und Unterprogramm
 ---------------------------------------
 
 
+=======================================================
+
+Einfache Schulmathemik:
+
+Vektor:  In der Ebene (2-dim Raum) und im 3-dim Raum 
+
+Wurzel:  Siehe math.h
+
+Addition:
+
+V1 + V2 = ErgebnisVektor
+
+'vectorAdd' :
+
+double vec1[3];
+double vec2[3];
+double sum[3];
+
+Addition  ==> Wohin mit dem Ergebnis ????
+
+Da müssen wir einen weiteren Vektor / weiteres Array für das Ergbnis
+bereit stellen.
+
+vectorAdd ( double vec1[], double vec2[], double sum[], int length);
