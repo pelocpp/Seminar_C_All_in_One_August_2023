@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arrays.c" />
+    <ClCompile Include="Dynamisch.c" />
     <ClCompile Include="Memory.c" />
     <ClCompile Include="Program.c" />
     <ClCompile Include="Uebung_01_Teufel.c" />
     <ClCompile Include="Uebung_02_Zinsen.c" />
     <ClCompile Include="Uebung_03_Fakulaet.c" />
     <ClCompile Include="Uebung_04_Vektor.c" />
+    <ClCompile Include="Uebung_05_Binary_Converter.c" />
     <ClCompile Include="Unterprogramme.c" />
     <ClCompile Include="Zeiger.c" />
   </ItemGroup>

@@ -25,6 +25,29 @@ void array_zum_ersten ()
     }
 }
 
+int g_zahlen[10];  // 40 Bytes oder 10 int Werte
+
+void array_zum_ersten_deep_dive()
+{
+    int zahlen[10];  // 40 Bytes oder 10 int Werte
+
+    // wofür steht 'zahlen': 
+    // 'zahlen' steht für die ANFANGSADRESSE des Felds
+
+    //zahlen[0] = 123;
+    //zahlen[3] = 456;
+
+    *zahlen = 123;
+    *(zahlen + 3) = 456;
+
+    for (int i = 0; i < 10; ++i) {
+
+        // zahlen[i] = 123 + i;
+        *(zahlen + i) = 123 + i;
+    }
+}
+
+
 void array_mit_falschem_index_zugriff (int index)
 {
     int zahlen[10];
@@ -124,6 +147,8 @@ void array_einfache_demo_zum_zweiten()
 
 void arrays()
 {
+    array_zum_ersten_deep_dive();
+
     array_einfache_demo_zum_zweiten();
 
     printf("bin hier\n");

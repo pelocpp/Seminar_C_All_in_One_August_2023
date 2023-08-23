@@ -42,5 +42,11 @@
     <ClCompile Include="Memory.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Dynamisch.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Uebung_05_Binary_Converter.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

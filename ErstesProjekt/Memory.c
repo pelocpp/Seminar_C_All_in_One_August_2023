@@ -7,6 +7,56 @@ void func_03();
 int g_var_1 = 123;
 int g_var_2 = 456;
 
+void tauscheZweiWerte_zumDritten(int* n, int* m)
+{
+	int tmp = *n;   // indirekter Zugriff // Gebrauch des Verweis Operators *
+	*n = *m;        // ZWEIMAL  indirekter Zugriff : links und rechts
+	*m = tmp;
+}
+
+void tauscheZweiWerte_zumZweiten(int* n, int* m)
+{
+	int tmp1 = *n;   // indirekter Zugriff // Gebrauch des Verweis Operators *
+	int tmp2 = *m;
+
+	*m = tmp1;       // indirekter Zugriff // Gebrauch des Verweis Operators *
+	*n = tmp2;
+}
+
+void test_tauscheZweiWerte_zumZweiten()
+{
+	int x = 5;
+	int y = 6;
+
+	tauscheZweiWerte_zumZweiten( &x, &y );
+
+	printf("%d - %d", x, y);  // ===========> 6 - 5
+}
+
+
+
+void tauscheZweiWerte(int n, int m)
+{
+	int tmp1 = n;
+	int tmp2 = m;
+
+	m = tmp1;
+	n = tmp2;
+}
+
+void test_tauscheZweiWerte()
+{
+	int x = 5;
+	int y = 6;
+
+	tauscheZweiWerte(x, y);
+
+	printf("%d - %d", x, y);  // ===========> 6 - 5
+}
+
+
+
+
 void zaehleEinsDazu(int n)
 {
 	n++;
@@ -70,6 +120,6 @@ void memory_zum_ersten()
 
 void memory()
 {
-	test_zaehleEinsDazu_ZumZweiten();
+	test_tauscheZweiWerte_zumZweiten();
 }
 

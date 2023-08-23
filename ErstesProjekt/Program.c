@@ -10,16 +10,18 @@ void uebung_01_teufel();
 void uebung_02_zinsen();
 void uebung_03_fakultaet();
 void uebung_04_vector();
+void uebung_05_binary_converter();
 
 void arrays();
 void hauptprogramm();
 void wurzel();
 void zeiger();
-void memory();
+void memory(); 
+void test_dynamisch();
 
 void main()
 {
-	memory();
+	uebung_05_binary_converter();
 }
 
 // ==================================

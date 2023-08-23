@@ -13,11 +13,35 @@ Wie ist das einer CPU / Recheneinheit zugeordnet:
 
 Beispiel: Intel  ==> Segmente
 
-== Globales Datensegment:  Data Segment  // DS // Globale Variablen
-== Stack Segment:          Stack Segment // SS // Lokale Variablen
-== Dynamische Variablen
+== Globales Datensegment:  Data Segment   // DS // Globale Variablen
+== Stack Segment:          Stack Segment  // SS // Lokale Variablen
+== Dynamische Variablen:   Extra Segment  // ES // Halde (Haufen) / Heap 
+== Maschinencode:          Code Segment   // CS // Maschinencode
+
+4 Segment kann man mit 2 Bits steuern:  00, 01, 10, 11
 
 ===============================================
+
+Lebensdauer von Variablen:
+
+== Globale Variablen:
+   Gesamte Dauer des Programms.
+
+== Lokale Variablen:
+   Nur solange, wie man sich in dem Unterprogramm befindet,
+   das diese Variablen definiert hat.
+
+   Für welchen Zweck kann man eigentlich lokale Variablen nur verwenden:
+   Ablage von Zwischenergebnissen (während einer Berechung)
+
+== Dynamische Variablen:
+   Solange man sie benötigt!
+   Zu diesem Zweck gibt es 2 Funktionen: malloc(), free()
+   Wenn man die Variable benötigt:            malloc()
+   Wenn man die Variable nicht mehr benötigt: free()
+
+===============================================
+
 
 Loader / Lader:
 ---------------
@@ -57,6 +81,21 @@ Hierzu werden alle Werte, die als Parameter an das Unterprogramm übergeben werde
 Bezeichnung:  Call - by - Value   (   Call - by - Copy  )
 
 ==> Unterprogrammaufruf - Mechanismus:
+
+------------------------------------------------------------------
+
+Bemerkung:
+
+Es können auch Adressen an ein Unterprogramm übergeben werden !!!
+
+Es geht jetzt nur um "deutsche Ausdrucksweise":
+
+a) Puristen / viele Bücher:  Dennoch sprechen viele von  Call - by - Value
+
+b) Aus meiner Sicht sinnvoller: 
+
+   Call - by - Reference  ( ==  Call - by - Address /  Call - by - Pointer )  
+
 
 ===============================================
 
@@ -111,8 +150,197 @@ void test()
    printf("%d - %d", x, y);  // ===========> 6 - 5
 }
 
+===============================================
+
+Dynamischer Speicher:
+
+Nebenbemerkung: Was ist Alignment: 
+
+    Ausrichtung von Variablen auf "gerade" Adressen:
+
+    Steht für "Vielfache" der Breite des Akkus // Größe des zentralen Rechenregisters
+
+===============================================
+
+malloc vs free:
+
+Vergisst man einen Aufruf von free, spricht man von einem "Memory Leak":
+
+Dieser durch malloc angelegt Block kann nie mehr freigegeben werden,
+wenn man die Adresse nicht mehr hat.
+
+zb. ein Unterprogramm wird verlassen,
+Adresse war in diesem Unterprogramm auf dem Stack.
 
 
 ===============================================
 
+Pointer Arithmetik / Zeiger Arithmetik:
+--------------------------------------
+
+Hier sind wir recht nahe an Assembler / Maschinensprache in lesbarer Darstellung.
+
+
+Beispiel:
+
+int* zahlen = malloc( n * sizeof (int) ); 
+
+int* zahlen;
+int  i;
+
+Annahme: Adresse zahlen = 1024:
+
+Was kommt bei 'zahlen + 3' für ein Ergebnis raus ??? 1036
+
+1030
+1027
+keine Ahnung
+
+Tatsächliche Addition / Realität im MC:  1024 + 3 * sizeof (int) = 1024 + 12 = 1036 
+
+12 dezimal  = C hexa
+
+Wunsch: 
+
+// Addition: Zeiger + int-Wert
+zahlen + i  ===> bei dem i.-ten Element im Speicher ankomme.
+
+Probe:
+=====
+
+double* dp = malloc (5 * sizeof (double));
+
+Annahme: dp = 2100
+
+Was ist dp + 4 ?  2132 
+
+dp + 4 = 2100 + 4 * sizeof (double) = 2100 + 4 * 8 = 2100 + 32 = 2132.
+
+// ===========================================
+
+Konsequenz / Auswirkung der Zeigerarithmetik:
+
+2 Schreibweisen für den Zugriff auf das i.-te Element:
+
+a)      zahlen[i] = 123 + i;
+
+        Eckige Klammern
+
+        oder
+
+b)      *(zahlen + i) = 123 + i;
+
+        Zeigerarithmetik (+) und Indirekter Zugriff (*)
+
+Dies 2 Schreibweisen sind IDENTISCH
+
+Logisch / beabsichtigt: Die eckigen Klammern sind LEICHER LESBAR.
+
+=========================================================
+
+Übung:
+
+Binär-Konvertierer
+
+Binäre Zahlendarstellung
+
+Aufgabenstellung:
+
+12345 => 11 0000 0011 1001  (14 Bits)
+
+12345678 => 1011 1100 0110 0001 0100 1110 (24 Bits)
+
+Mehr Details: Ergebnis soll nicht auf der Konsole ausgegeben werden,
+              sondern in einem Array, bestehend aus 0 und 1, abgelegt werden.
+
+Bebachtungen:
+
+Hmm, wieviele 0 und 1 hat das Ergebnis?
+
+Im Vorneherein nicht bekannt.
+
+Ideen:
+
+a) Länge des Ergebnisses nicht bekannt:   Dynamischen Speicher.
+
+   Nicht verboten:  Feld der festen Länge 200 // 256 
+
+   Ein relativ großes Feld, wo "jedes" Ergebnis reinpasst.
+
+   Code Smell // Code riecht 
+
+b) Optimal: Dynamischen Speicher.
+
+   Länge des Ergebnisses: Muss berechnet werden.
+
+   Preis // Ambivalenz: Pro und Contra:
+
+   Laufzeit (Performanz) <====> Speicherbedarf eines Programms.
+
+c) Immer ein größeres Problem in kleinere zerlegen.
+
+   ==> Strukturierung des Programms bei !!!
+
+Details:
+
+Schnittstelle von Funktionen fest:
+
+i) Länge des Ergebnisses: Muss berechnet werden.
+
+    int computeNumberOfBits (int number); 
+
+    Beispiel: 
+
+    12345 => 11 0000 0011 1001  (14 Bits)
+
+    computeNumberOfBits (12345) ==> 14
+
+ii) void printBinary  (int* bits, int count);
+
+iii) convertBinary (int number)
+
+   Optionen:
+
+   a) void convertBinary ( int number, int* bits, int count );
+
+      a1) Ich rufe erst mal computeNumberOfBits auf
+      a2) Ich lege dynamisch Speicher an (Zeiger)
+      a3) Ich rufe convertBinary mit der Zahl und dem Speicher auf
+      a4) Gebe das Ergebnis mit einer Funkion printBinary aus
+
+      // Pro / Contra
+
+   b) int* convertBinaryEx ( int number, int* count );
+
+      b1) Muss intern computeNumberOfBits aufrufen
+      b2) Muss intern dynamisch Speicher anlegen (Zeiger)
+      b3) Muss das Ergebnis im Speicher ablegen (Berechnung)
+      b4) Liefert das Ergebnis (Speicher plus Länge) zurück
+      b5) Wer gibt den Speicher wieder frei: Der Aufrufer von convertBinaryEx
+
+      b6) Anmerkung: b5) ist Okay, aber es ist zu DOKUMENTIEREN !!!
+
+      "The returned pointer must be passed to free to avoid a memory leak."
+
+    c)   Pro / Contra von a) und b)
+
+// --------------------------------------------------
+
+Realisierungs Grundlage:
+
+Beispiel: 13 ==> 1101
+
+Algorithmus: computeNumberOfBits
+
+Wiederholend:
+
+       = Zahl durch 2 geteilt, bis die Zahl 0 ist.
+       = Die Reste bilden das Ergebnis.
+
+13 / 2 = 6  Rest 1
+6 / 2 =  3  Rest 0
+3 / 2 =  1  Rest 1
+1 / 2 =  0  Rest 1
+
+Hier kommt 4 als Ergebnis zurück.
 
