@@ -15,10 +15,11 @@ void arrays();
 void hauptprogramm();
 void wurzel();
 void zeiger();
+void memory();
 
 void main()
 {
-	zeiger();
+	memory();
 }
 
 // ==================================

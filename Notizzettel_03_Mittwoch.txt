@@ -1,0 +1,118 @@
+C All in One
+=============
+
+Notizen Mittwoch:
+
+Speicher in einem C Programm
+
+== Globale Variablen
+== Lokale Variablen
+== Dynamische Variablen
+
+Wie ist das einer CPU / Recheneinheit zugeordnet:
+
+Beispiel: Intel  ==> Segmente
+
+== Globales Datensegment:  Data Segment  // DS // Globale Variablen
+== Stack Segment:          Stack Segment // SS // Lokale Variablen
+== Dynamische Variablen
+
+===============================================
+
+Loader / Lader:
+---------------
+
+Globale Variablen:
+
+Werden vom Übersetzer via Offsets in das Data Segment zugeordnet
+
+Wenn das Programm ausgeführt wird:
+
+Betriebssytem:  Loader / Lader:   Offset ==> reale Adresse
+
+Vergibt auch ein Stack Segment: Reservierung.
+
+===============================================
+
+Stack:
+
+push / pop
+
+Stack Pointer:   SP
+
+Stapelzeiger
+
+===============================================
+
+Debugger:   ==> Call Stack // Aufrufliste // Aufrufstapel
+
+===============================================
+
+Übergabe von Werten an ein Unterprogramm:
+
+Hierzu werden alle Werte, die als Parameter an das Unterprogramm übergeben werden,
+== auf dem Stack abgelegt.
+== auf den Stack KOPIERT.
+
+Bezeichnung:  Call - by - Value   (   Call - by - Copy  )
+
+==> Unterprogrammaufruf - Mechanismus:
+
+===============================================
+
+Pascal  ==>  Pointer
+
+Java    ==>  Referenz    (  hübscher )
+
+===============================================
+
+VORSICHT:
+
+	n++;   // ????????????????????????????????
+
+Welchen Typ hat n ?
+
+a) int n;   dann wird 1 zu n dazugezählt
+
+b) int* n; 
+
+   i) Man kann prinzipiell eine Adresse hochzählen.
+
+      Aber: Wenn - zB - die Adresse vom Typ int* ist
+
+      und ein int im Speicher 4 Bytes belegt, dann gilt für "n++" :
+
+   ii) Vorsicht: Beispiel: Adresse vorher:  1024 
+                           Adresse nachher: 1028 
+
+ODER:   double* dp;
+
+   Beispiel  für dp++:
+   
+            Adresse vorher:  1024 
+            Adresse nachher: 1032   !!! Ein double belegt 8 Bytes 
+
+
+===============================================
+
+Übung:
+
+Schreibe eine Funkion 'tauscheZweiWerte':
+
+Beispiel:
+
+void test()
+{
+   int x = 5;
+   int y = 6;
+
+   tauscheZweiWerte (x, y);
+
+   printf("%d - %d", x, y);  // ===========> 6 - 5
+}
+
+
+
+===============================================
+
+

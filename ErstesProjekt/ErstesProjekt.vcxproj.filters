@@ -39,5 +39,8 @@
     <ClCompile Include="Zeiger.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Memory.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
