@@ -339,6 +339,12 @@ Alle ASCII-Code
 
 Frage: Welches Zeichen kommt am häufigsten vor ???
 
+Lösung: 
+
+Haeufigstes Zeichen: ' ' = 32       // Vorkommen: 181
+
+Zweithaeufigstes Zeichen: 'n' = 110 // Vorkommen: 32
+
 ======================================================================
 
 

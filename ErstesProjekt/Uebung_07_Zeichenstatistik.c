@@ -59,9 +59,9 @@ void uebung_07_statistik()
 		for (int i = 0; i < 127; i++) {
 
 			// Wenn man das Blank nicht möchte ...
-			if (i == 32) {
-				continue;
-			}
+			//if (i == 32) {
+			//	continue;
+			//}
 
 			if (statistik[i] > maxCounter) {
 				maxAscii = i;
