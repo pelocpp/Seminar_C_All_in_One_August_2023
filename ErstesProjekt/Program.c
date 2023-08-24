@@ -18,10 +18,11 @@ void wurzel();
 void zeiger();
 void memory(); 
 void test_dynamisch();
+void zeichen();
 
 void main()
 {
-	uebung_05_binary_converter();
+	zeichen();
 }
 
 // ==================================

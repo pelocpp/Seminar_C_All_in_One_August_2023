@@ -1,0 +1,105 @@
+C All in One
+=============
+
+Notizen Donnerstag:
+
+Zeichen und Zeichenketten
+(char und string)
+
+Zeichen: Einzelnes Zeiches
+
+Zeichenketten: Mehrere Zeichen
+
+Ausnahmen: Maskierungszeichen  \
+
+=========================================
+
+Wofür steht ein Wert des Datentyps char?
+
+== (einfach):  ein Zeichen
+
+== (exakt):    einer Zahl (int) aus dem Zahlenbereich ASCII Code
+
+Klassische Definition
+aller Wörter in einem C-Programm:
+
+Sie müssen mit Zeichen aus der ASCII Code Tabelle gebildet werden.
+
+Nicht: Umlaute zB
+
+ASCII Code:    1 Zeichen aus dem ASCII-Code:  1 Byte
+
+               Noch genauer: 7 Bits - das oberste ist unbenutzt
+
+UNICODE Code:  1 Zeichen aus dem ASCII-Code:  2 Byte
+
+Schreibmaschine:
+
+Wagen
+
+Hebel für den Wagenrücklauf:
+
+A) Bewegt den Wagen nach links:              Carriage Return
+
+B) Dreht den Wagen um eine Zeile nach unten: Line Feed
+
+\n == 10 
+
+und
+
+\r == 13
+
+===========================================
+
+Erweiterte ASCII Tabelle: Viele solcher Tabellen.
+
+===========================================
+
+Zeichenkette:
+
+Folge von Zeichen:
+
+Syntax: In Doppelhochkomma
+
+"ABC"
+
+"12345"
+
+"asefsefrse3wdfrtunincfvxrbtznuzfnu"
+
+----------------------------------------------
+
+Welchen Datentyp hat eine Zeichenkette 
+in der Darstellung mit "" ???
+
+const char* = "1234567890";
+
+----------------------------------------------
+
+Wie ist eine Zeichenkette im Speicher abgelegt ??
+
+Beispiel:
+
+"ABC"
+
+i)   Mit den entsprechenden ASCII - Codes: 65, 66, 67
+
+ii)  Mit einer Null als Kennung für das Ende der Zeichenkette !
+
+     Begrifflichkeiten:
+
+     Null  - 0
+     ASCI Null
+     Backslash 0
+
+===================================================
+
+a) Konstante Zeichenketten :  "ABC"
+
+b) Nicht-konstante Zeichenketten:
+
+   i) malloc
+
+   ii) Mit einem Feld des Datentyps char (Anzahl der Zeichen begrenzt)
+
+  
