@@ -8,10 +8,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{9BF3A5F4-2A6B-4644-851B-7F271AC36E8C}"
 	ProjectSection(SolutionItems) = preProject
 		Array_01.png = Array_01.png
+		Ascii_Table-nocolor.svg.png = Ascii_Table-nocolor.svg.png
 		Call_by_Value_01.png = Call_by_Value_01.png
 		Call_by_Value_02.png = Call_by_Value_02.png
 		Glob_Var.png = Glob_Var.png
 		Heap.png = Heap.png
+		Leere_Zeichenkette.png = Leere_Zeichenkette.png
 		malloc_und_array.png = malloc_und_array.png
 		Memory_01.png = Memory_01.png
 		Notizzettel_01_Montag.txt = Notizzettel_01_Montag.txt
@@ -27,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Pr
 		Vector.pdf = Vector.pdf
 		Vector_01.png = Vector_01.png
 		Vector_02.png = Vector_02.png
+		Zeichenkette_ABC.png = Zeichenkette_ABC.png
+		Zeichenkette_Anhängen.png = Zeichenkette_Anhängen.png
 		Zeiger_Increment.png = Zeiger_Increment.png
 		Zinsberechnung.pdf = Zinsberechnung.pdf
 	EndProjectSection

@@ -102,4 +102,130 @@ b) Nicht-konstante Zeichenketten:
 
    ii) Mit einem Feld des Datentyps char (Anzahl der Zeichen begrenzt)
 
-  
+===================================================
+
+Programmiersprache C:
+
+== Arithmetische Verarbeitung 
+
+== Textverarbeitung
+
+==> Zeichenkettenverarbeitung:
+
+
+Zeichenkettenverarbeitung:
+
+- Länge einer Zeichenkette
+- Zeichenkette kopieren
+- Zeichenkette anhängen
+- Teil einer Zeichenkette extrahieren
+
+- Insert: Ein Zeichen in eine Zeichenkette einfügen
+- Replace: Zeichen an einer Stelle ersetzen / austauschen
+
+Umsetzung:
+
+- Länge einer Zeichenkette
+
+Entwurf:
+
+int  str_length  ( char* s ) ; 
+
+Es ist die terminierenden Null zu suchen - 
+
+ausgehend vom ersten Zeichen; Zeichen für Zeichen;
+
+Eine Zählvariable der übersprungenen Zeichen ist das Ergebnis.
+
+----------------------------------------------------
+
+- Zeichenkette anhängen
+
+"ABC"    "XYZ"
+
+Ich möchte "XYZ" an "ABC" anhängen.
+
+                "ABC"       "XYZ"         Wohin / Ziel
+
+    str_append ( quelle ,            s,           ziel)
+
+    str_append ( char* ,            char*,       char ziel[] )
+
+    str_append ( char* quelle,     char* s,       char*  ziel   )
+
+Ich kann am Ende der Zeichenkette quelle NICHT weiterschreiben:
+
+DIESER Speicher gehört mir nicht.
+
+ETWAS genauer formulieren:
+
+a) quelle = Konstante Zeichenkette: Am Ende '\0'.
+
+    Was danach im Speicher kommt, weiß ich nicht und gehört mir nicht.
+
+b) quelle = Nicht-Konstante Zeichenkette: Am Ende '\0'.
+
+   Theoretisch könnte das Feld LÄNGER sein ... aber das weiß ich nicht .
+
+Vorgehensweise:
+
+i)   In Ziel habe ich Platz für das Ergebnis
+ii)  Erst Quelle nach Ziel umkopieren
+iii) Dann s nach Ziel umkopieren
+iV)  Am Ende eine terminierende Null noch ergänzen.
+
+=============================================================
+
+Beobachtung:
+
+a) Erste Lösung war mit Array
+
+b) Zweite Lösung ist mit malloc
+
+Pro:
+
+Was spricht für a): Laufzeit ist optimal 
+
+                    ( bin nicht in der Lage, den Speicherplatz passgenau zu vergeben )
+
+Was spricht für b): Speicherplatz ist optimal !!!
+
+                    (  malloc und free kosten Zeit )
+
+===============================================================
+
+Alternative Definition einer Funktion str_append:
+
+    char* str_append ( char* quelle, char* s);
+
+Konsequenz:
+
+Der Aufrufer von str_append muss free aufrufen !!!!!!!!!!!!!
+
+===============================================================
+
+Übung:
+
+- Insert: Ein Zeichen in eine Zeichenkette einfügen
+- Replace: Zeichen an einer Stelle ersetzen / austauschen
+
+A) Insert:
+
+  "ABCDE"  , an der Position 3 ein '!' einfügen ===> "ABC!DE"
+
+  //  "ABCDE"        3        '!'       für das Ergebnis
+  Insert (char* quelle, int pos, char ch,  char ziel[] )
+
+  Eine gute Lösung: Überprüft, ob pos zur Länge der quelle passt.
+
+B) Replace:
+
+   "ABCDE"  , an der Position 3 das 'D' durch ein '!' ersetzen ===> "ABC!E"
+
+   //      "ABCDE"         3          '!'
+   Replace (char* quelle, int pos, char ch )
+
+   Eine gute Lösung: Überprüft, ob pos zur Länge der quelle passt.
+
+   Überraschung :)
+

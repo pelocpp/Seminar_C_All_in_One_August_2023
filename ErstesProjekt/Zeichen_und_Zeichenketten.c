@@ -1,4 +1,5 @@
 #include <stdio.h>  
+#include <stdlib.h>  
 
 void zeichen_zum_ersten()
 {
@@ -75,8 +76,89 @@ void zeichenkette_zum_zweiten()
 	printf("kette2: %s.\n", kette2);
 }
 
+// ===================================================
+
+int str_length(char* s)
+{
+	int index = 0;
+
+	while ( s[index] != '\0') {
+
+		index++;
+	}
+
+	return index;
+}
+
+void test_str_length()
+{
+	int len = str_length("ABC");
+	printf("len = %d\n", len);
+
+	len = str_length("");
+	printf("len = %d\n", len);
+}
+
+// ===================================================
+
+void str_append (char* ursprung, char* s, char buffer[])
+{
+	//i)   In buffer habe ich Platz für das Ergebnis
+	//ii)  Erst Quelle nach buffer umkopieren
+
+	int index = 0;
+	while (ursprung [index] != '\0') {
+
+		buffer[index] = ursprung[index];
+
+		index++;
+	}
+
+	// iii) Dann s nach buffer umkopieren
+	int indexFuerS = 0;
+
+	while (s[indexFuerS] != '\0') {
+
+		buffer[index] = s[indexFuerS];
+
+		indexFuerS++;
+		index++;
+	}
+
+	// iV)  Am Ende eine terminierende Null noch ergänzen.
+	buffer[index] = '\0';
+}
+
+void test_append()
+{
+	//                   "ABC"   "XYZ"         Wohin / Ziel
+
+	char ziel[100];
+
+	str_append("ABC", "XYZ", ziel);
+}
+
+void test_append_optimized()  // bzgl. Speicherplatz
+{
+	char* ursprung = "ABC";
+	char* s = "XYZ";
+
+	int lenUrsprung = str_length(ursprung);
+	int lenS = str_length(s);
+
+	// char ziel[100];
+	// ACHTUNG: Ein char für das NULL-Byte nicht vegessen
+	char* ziel = malloc( (lenUrsprung + lenS + 1) * sizeof(char) );
+
+ 	str_append(ursprung, s, ziel);
+
+	free(ziel);
+}
+
+// =====================================================
+
 void zeichen()
 {
-	zeichenkette_zum_zweiten();
+	test_append_optimized();
 }
 
