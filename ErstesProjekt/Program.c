@@ -12,6 +12,7 @@ void uebung_03_fakultaet();
 void uebung_04_vector();
 void uebung_05_binary_converter();
 void uebung_06_strings();
+void uebung_07_statistik();
 
 void arrays();
 void hauptprogramm();
@@ -24,7 +25,7 @@ void files();
 
 void main()
 {
-	files();
+	uebung_07_statistik();
 }
 
 // ==================================
