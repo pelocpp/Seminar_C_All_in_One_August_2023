@@ -220,7 +220,7 @@ A) Insert:
 
 B) Replace:
 
-   "ABCDE"  , an der Position 3 das 'D' durch ein '!' ersetzen ===> "ABC!E"
+   "ABCDE", an der Position 3 das 'D' durch ein '!' ersetzen ===> "ABC!E"
 
    //      "ABCDE"         3          '!'
    Replace (char* quelle, int pos, char ch )
@@ -228,4 +228,65 @@ B) Replace:
    Eine gute Lösung: Überprüft, ob pos zur Länge der quelle passt.
 
    Überraschung :)
+
+   Abhilfe:   Zum Testen von Replace wird quelle wie folgt definiert:
+
+   char quelle[] = "ABCDE";
+
+   Why ===> Besprechung der Lösung !!!
+
+
+==============================================================
+
+Zeichenkettenverarbeitung über die Bibliothek string.h
+
+https://de.wikibooks.org/wiki/C-Programmierung:_Zeichenkettenfunktionen
+
+2 Beispiele:
+
+strcat
+
+strlen
+
+Tuen das Gleiche wie str_length und str_append
+
+1	strcpy    String kopieren
+2	strncpy   String kopieren, maximal n Zeichen
+3	strcat    String anhängen
+4	strncat   String anhängen, maximal n Zeichen
+5	strtok    Diese Funktion zerlegt einen String
+6	strcspn
+7	strpbrk
+8	strchr
+9	strrchr
+10	strcmp    Zeichenketten vergleichen / compare
+11	strncmp
+12	strspn
+13	strlen    Länge
+
+==============================================================
+
+int versus size_t
+
+Hmmm, etwas akademisch:
+
+a) Beides sind integer Werte (1,2, 3)
+
+b) int kann auch negative Werte haben, size_t hingegen nur positive 
+
+__int64 entspricht einem int auf einem 64 Bit Betriebssystem:
+
+unsigned bedeutet: Ohne Vorzeichen, nur positive Werte
+
+typedef unsigned __int64 size_t;
+
+=============================================================
+
+Vorsicht oder Achtung:
+
+Die Zeichenkettenfunktionen wurden überarbeitet:
+
+a) es gibt eine klassische Version
+
+b) es gibt eine neue, secure Version
 

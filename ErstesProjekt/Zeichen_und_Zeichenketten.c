@@ -1,5 +1,8 @@
+// #define _CRT_SECURE_NO_WARNINGS 
+
 #include <stdio.h>  
 #include <stdlib.h>  
+#include <string.h>  
 
 void zeichen_zum_ersten()
 {
@@ -157,8 +160,123 @@ void test_append_optimized()  // bzgl. Speicherplatz
 
 // =====================================================
 
+void replace(char* quelle, int pos, char ch) {
+
+	int lenQuelle = str_length(quelle);
+
+	if (pos >= lenQuelle) {
+		return;
+	}
+
+	quelle[pos] = ch;
+}
+
+void test_replace()
+{
+	//  "ABCDE", an der Position 3 das 'D' durch ein '!' ersetzen ===> "ABC!E"
+
+	// char* quelle = "ABCDE";  // VORSICHT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	//                "ABCDE" liegt im Codesegment -- hier ist ein SCHREIBEN VERBOTEN / Absturz
+
+	char quelle[] = "ABCDE";
+	// Haben wir mit quelle ein Array, das am Stack liegt
+	// Es wird "ABCDE" in das Array umkopiert, bzw. das Array damit vorgelegt.
+
+	printf("Quelle: Vorher:  %s\n", quelle);
+
+	replace(quelle, 5, '!');
+	printf("Quelle: Nachher: %s\n", quelle);
+}
+
+// =====================================================
+
+void insert(char* quelle, int pos, char ch, char ziel[]) {
+
+	int lenQuelle = str_length(quelle);
+	if (pos > lenQuelle) {
+		return;
+	}
+
+	// copy first part of quelle to ziel
+	int index = 0;
+	for (; index < pos; ++index) {
+		ziel[index] = quelle[index];
+	}
+
+	// copy character to insert into ziel
+	ziel[index] = ch;
+
+	// copy second part of quelle to ziel
+	for (int i = index; i < lenQuelle; ++index, ++i) {
+		ziel[i+1] = quelle[i];
+	}
+
+	// terminate ziel
+	// ziel[index] = '\0';   // oder
+	ziel[lenQuelle + 1] = '\0';
+}
+
+void test_insert()
+{
+	// "ABCDE"  , an der Position 3 ein '!' einfügen ===> "ABC!DE"
+	char* quelle = "ABCDE";
+	printf("Quelle: %s\n", quelle);
+
+	char ziel[100];
+	insert(quelle, 5, '!', ziel);
+	printf("Ziel:   %s\n", ziel);
+}
+
+// =====================================================
+
+void test_c_library_strlen()
+{
+	//int x = sizeof(int);
+	//int y = sizeof(size_t);
+
+	//int y1 = sizeof(long);
+	//int y2 = sizeof(long long);
+
+	char string1[] = "Das ist ein Test";   // am Stack als Array
+
+	size_t length;
+
+	length = strlen(string1);
+
+	printf("Der String \"%s\" hat %lld Zeichen\n", string1, length);
+}
+
+void test_c_library_strcat()
+{
+	//// anhängen: to append oder to concatenate   => cat
+	//// 
+	//char text[20] = "Hallo!";
+	//
+	//printf("%s\n", text);
+
+	//strcat(text, "Ja, du!");
+
+	//printf("%s\n", text);
+}
+
+void test_c_library_strcat_secure()
+{
+	// anhängen: to append oder to concatenate   => cat
+	// 
+	char text[20] = "HALLO!";
+
+	printf("%s\n", text);
+
+	strcat_s(text, 20, "Ja, du!");   // statt 20 geht auch sizeof (text)
+
+	printf("%s\n", text);
+}
+
+// =====================================================
+
+
 void zeichen()
 {
-	test_append_optimized();
+	test_c_library_strcat_secure();
 }
 
