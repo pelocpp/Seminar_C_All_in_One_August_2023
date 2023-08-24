@@ -11,6 +11,7 @@ void uebung_02_zinsen();
 void uebung_03_fakultaet();
 void uebung_04_vector();
 void uebung_05_binary_converter();
+void uebung_06_strings();
 
 void arrays();
 void hauptprogramm();
@@ -19,10 +20,11 @@ void zeiger();
 void memory(); 
 void test_dynamisch();
 void zeichen();
+void files();
 
 void main()
 {
-	zeichen();
+	files();
 }
 
 // ==================================

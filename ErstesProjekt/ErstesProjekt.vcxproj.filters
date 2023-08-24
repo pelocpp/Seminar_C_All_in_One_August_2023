@@ -51,5 +51,11 @@
     <ClCompile Include="Zeichen_und_Zeichenketten.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Uebung_06_Strings.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Dateien.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

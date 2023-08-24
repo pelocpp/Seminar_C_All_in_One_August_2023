@@ -290,3 +290,61 @@ a) es gibt eine klassische Version
 
 b) es gibt eine neue, secure Version
 
+=============================================================
+
+Dateien:
+========
+
+Eine Datei eines Betriebssystems kann in C gelesen und geschrieben werden.
+
+Folgende Funktionen benötigen wir:
+
+fopen -   file open 
+
+          1. Parameter: Name der Datei, 2. Parameter: Modus: lesen oder schreiben
+                  
+
+fgets -   file get string
+
+          Liest EINE Zeile aus der Datei ein (Zeile: Ende einer Zeile ... \n  oder auch \r )
+
+          Wie lange ist die Zeile ???
+
+          fgets: 3 Parameter
+          1.) FILE* Zeiger
+          2.) Puffer
+          3.) Länge dieses Puffers
+
+          Beispiel: Erste Zeile in der Datei ist 67 Zeichen lang
+
+          a) char buffer [100];  ==> fgets geht gut
+          b) char buffer [32];   ==> fgets liest die ersten 32 Zeichen der Zeile ein.
+
+          Frage: Wie kann ich a) und b) unterscheiden ???
+
+
+fclose -  file close
+
+Mit fopen sind wir unabhängig vom Betriebssystem:
+
+Win32 ==> OpenFile
+Unix  ==> open
+
+
+======================================================================
+
+Zeichenstatistik aller Zeichen // in einem Text:
+
+Alle ASCII-Code
+
+Frage: Welches Zeichen kommt am häufigsten vor ???
+
+======================================================================
+
+
+
+
+
+
+
+
