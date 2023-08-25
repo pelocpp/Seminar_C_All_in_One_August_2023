@@ -60,5 +60,19 @@
     <ClCompile Include="Uebung_07_Zeichenstatistik.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Strukturen.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Time.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,6 +2,8 @@
 #include <stdlib.h>   // exit()
 #include <math.h>     // sqrt
 
+#include "Time.h"
+
 // Extern-Deklaration einer globalen Variablen
 // extern int globaleVariable;
 
@@ -22,10 +24,13 @@ void memory();
 void test_dynamisch();
 void zeichen();
 void files();
+void strukturen();
 
 void main()
 {
-	uebung_07_statistik();
+	struct Time jetzt;
+
+	strukturen();
 }
 
 // ==================================

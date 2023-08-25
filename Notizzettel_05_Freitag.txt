@@ -1,0 +1,58 @@
+C All in One
+=============
+
+Notizen Freitag:
+
+Stukturen
+
+Wie können wir in C Daten hantieren ?
+
+i) Kleine Daten / Werte: Elementaren Datentyps (int, double, etc.)
+
+ii) Mehrere Daten desselben Typs: Arrays (fixed sized) // Speicher via malloc (dynamic sized) 
+
+iii) Mehrere Daten unterschiedlichen Typs: Struktur
+
+Oder:
+
+Eine Struktur fasst mehrere, logisch zusammengehörende Daten zu einer Einheit
+zusammen.
+
+// =================================================================
+
+Verwendung einer Struktur in mehreren Dateien:
+
+Definition der Struktur in einer Header-Datei vornehmen:
+
+a) .c Dateien - C-Programmcode
+
+b) .h Dateien - Deklarationen von Strukturen // Datentypen //
+                struct / union / 
+
+                Funktions-Prototypen
+                ( Deklarationen der Schnittstelle einer Funktion )
+
+                Auch #define's
+
+                NICHT: C-Programmcode
+
+                NICHT: Vereinbarung von globalen Variablen
+
+                Vorhandenen Typen einen anderen Namen geben: typedef
+
+// =========================================================
+
+Was kann typedef ?
+
+Portabilität
+
+int: 
+
+Hat auf einem Rechner 4 Bytes im Speicher.
+
+Es gibt / gab Systeme, da hatte ein int nur 2 Bytes im Speicher
+(  16 Bit Rechner System  )
+
+Auch ein 16 Bit Rechner kennt ganzzahlige Variablen mit 4 Byte: long
+
+

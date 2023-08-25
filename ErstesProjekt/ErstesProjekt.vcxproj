@@ -132,6 +132,7 @@
     <ClCompile Include="Dynamisch.c" />
     <ClCompile Include="Memory.c" />
     <ClCompile Include="Program.c" />
+    <ClCompile Include="Strukturen.c" />
     <ClCompile Include="Uebung_01_Teufel.c" />
     <ClCompile Include="Uebung_02_Zinsen.c" />
     <ClCompile Include="Uebung_03_Fakulaet.c" />
@@ -142,6 +143,11 @@
     <ClCompile Include="Unterprogramme.c" />
     <ClCompile Include="Zeichen_und_Zeichenketten.c" />
     <ClCompile Include="Zeiger.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
