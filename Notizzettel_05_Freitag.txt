@@ -55,4 +55,46 @@ Es gibt / gab Systeme, da hatte ein int nur 2 Bytes im Speicher
 
 Auch ein 16 Bit Rechner kennt ganzzahlige Variablen mit 4 Byte: long
 
+====================================================================
+
+Übergabe von Parametern in C an eine Funkion:
+
+i)    Elementaren Variablen: Call-by_Value (Kopie)
+
+ii)   Array: Ein Array (Name) steht für die Anfangsadresse:
+
+      Es wird über die Adresse in das Original geschrieben:
+
+      In das Feld, dessen Adresse übergeben wird.
+
+iii)  Strukturen:  Call-by_Value (Kopie)
+
+      Optional: Es wird eine Adresse einer Struktur übergeben
+
+      ==> Dann greife ich auf das Original zu !!!!
+
+      ( Ich möchte das Original schützen: Kopie übergeben )
+
+      Und beachte: Übergabe eines Zeigers ist (wesentlich)
+      performanter als Übergabe einer Kopie
+
+      Mit 'const' kann man eine Struktur-Variable schützen
+      ( kein schreibender Zugriff möglich )
+
+====================================================================
+
+Kleine Übung:
+
+incrementTime:
+
+Erhöht die Uhrzeit um 1 Sekunde - Achtung: Überlauf :)
+
+11:12:58
+11:12:59
+11:12:60  <======  11:13:00
+
+11:59:59  ==> 12:00:00
+
+
+
 
