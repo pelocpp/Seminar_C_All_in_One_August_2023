@@ -156,5 +156,64 @@ C#:  uint, ulong, int, long
 
 ====================================================================
 
-13:10
+Freitag Nachmittag:
 
+Übung:  All - in - One:
+
+== Arrays
+
+== Strukturen
+
+   Array von Strukturen
+
+== Dynamische Daten
+
+Samrtphone: Kontakte Verwaltung
+
+== Contact
+
+== Viele Kontakte: Array
+
+-----------------------------------------
+
+Umsetzung: Es soll sowohl statisches Verhalten
+           als auch dynamisches Verhalten demonstriert werden.
+
+           // Daten fester Länger als auch variabler Länge.
+
+
+Beispiel:
+
+struct contact
+{
+	char* firstName;
+	char* lastName;
+};
+
+Zwei Adressen: Die beiden Namen sind DYNAMISCH zu allokieren
+
+    was inbesondere bedeutet: Ihre Länge ist exakt 
+
+    Genauer: Die Länge des Puffers ist exakt der Länge des Namens.
+
+
+Statisch: Anzahl der Kontakte:
+
+Array einer FESTEN Länge.
+
+
+Hinweis:
+
+Strukturen können 1:1 kopiert werden
+
+Arrays doch auch:  NEIN. Warum: Weil Arrays nur Zeiger sind.
+
+=====================================================
+
+Vorsicht:
+
+Die Eingabe von der Konsole ist - leider auf Grund einer nicht perfekten - 
+
+Bibliothek nicht immer ganz einfach !!!
+
+=====================================================

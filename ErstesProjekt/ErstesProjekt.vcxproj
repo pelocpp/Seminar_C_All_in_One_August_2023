@@ -140,6 +140,7 @@
     <ClCompile Include="Uebung_05_Binary_Converter.c" />
     <ClCompile Include="Uebung_06_Strings.c" />
     <ClCompile Include="Uebung_07_Zeichenstatistik.c" />
+    <ClCompile Include="Uebung_08_Kontakte.c" />
     <ClCompile Include="Unterprogramme.c" />
     <ClCompile Include="Zeichen_und_Zeichenketten.c" />
     <ClCompile Include="Zeiger.c" />

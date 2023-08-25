@@ -15,6 +15,7 @@ void uebung_04_vector();
 void uebung_05_binary_converter();
 void uebung_06_strings();
 void uebung_07_statistik();
+void uebung_08_kontakte();
 
 void arrays();
 void hauptprogramm();
@@ -28,9 +29,7 @@ void strukturen();
 
 void main()
 {
-	struct Time jetzt;
-
-	strukturen();
+	uebung_08_kontakte();
 }
 
 // ==================================

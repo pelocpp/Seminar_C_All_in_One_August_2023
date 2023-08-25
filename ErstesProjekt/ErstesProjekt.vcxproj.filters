@@ -63,6 +63,9 @@
     <ClCompile Include="Strukturen.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Uebung_08_Kontakte.c">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Time.h">
