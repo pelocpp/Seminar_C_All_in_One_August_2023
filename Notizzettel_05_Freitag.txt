@@ -95,6 +95,66 @@ Erhöht die Uhrzeit um 1 Sekunde - Achtung: Überlauf :)
 
 11:59:59  ==> 12:00:00
 
+====================================================================
 
+Was ist eine Union ?
 
+Zunächst mal ähnlich (Syntax) zu einer Struktur:
+
+union Test 
+{
+    float fwert;
+    int   iwert;
+};
+
+ABER: Im Speicher liegen fwert und iwert an DERSELBEN Adresse :-))))
+
+Mögliche Anwendung: Sehr maschinennahe SW
+
+union Test t;
+
+Nachtrag:
+
+int, long, .........
+
+Variablen dieser Typen können positiv und negativ sein.
+
+int counter = 0;
+
+counter ++;
+
+2 Vorgehensweisen:
+
+a) Ich weiß das ... nehme das in Kauf.
+
+   Ein (MINIMALER) Nachteil: 
+
+   Mein Wertebereich ist kleiner, da ich ja die negativen
+   Werte umsonst haben könnte:
+
+b) Will aber ich einen entsprechenden Datentyp haben:
+
+   unsigned int counter = 0;
+
+Konkret:
+
+short == 2 Bytes:
+
+Mit Vorzeichen:    -32.768 bis 32.767
+
+Ohne Vorzeichen:   0 .. 65.535
+
+FRAGE: Benötige ich wirklich den gesamten Wertebereich ???
+       Vor allem von  32.768 bis 65.535
+
+ODER:  Laufschleife:  0 bis 100 
+
+// C: 2 Schlüsselwörter aufeinander folgend
+unsigned int counter;
+
+C#:  uint, ulong, int, long
+
+====================================================================
+
+13:10
 
